@@ -1,0 +1,19 @@
+{
+  "name": "readersgrow",
+  "version": "0.0.0",
+  "authors": [
+    "Russell Vea <russellbvea@gmail.com>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "neat": "~1.7.2",
+    "bourbon": "~4.2.3"
+  }
+}
