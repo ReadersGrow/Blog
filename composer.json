@@ -1,0 +1,12 @@
+{
+    "name": "readersgrow/plugins",
+    "authors": [
+        {
+            "name": "Russell Vea",
+            "email": "russellbvea@gmail.com"
+        }
+    ],
+    "require": {
+        "jarednova/timber": "~0.21"
+    }
+}
