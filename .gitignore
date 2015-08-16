@@ -50,5 +50,6 @@ Thumbs.db
 ##########
 .sass-cache
 
+wp-content/themes/readersgrow/app/client
+wp-content/themes/readersgrow/app/jspm_packages
 node_modules
-wp-content/themes/readersgrow/src/client
