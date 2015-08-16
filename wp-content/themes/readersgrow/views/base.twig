@@ -6,22 +6,23 @@
 	</head>
 {% endblock %}
 
-	<body class="{{body_class}} rg-app" data-template="base.twig">
-		<header class="header" >
-			{% block header %}
-				<div class="wrapper">
-					<h1 class="hdr-logo" role="banner">
-						<a class="hdr-logo-link" href="/" rel="home">{{site.name}}</a>
-					</h1>
-				</div>
+	<body class="{{body_class}} " data-template="base.twig">
+		<div class="rg-app">
+			<header class="header" >
+				{% block header %}
+					<div class="wrapper">
+						<h1 class="hdr-logo" role="banner">
+							<a class="hdr-logo-link" href="/" rel="home">{{site.name}}</a>
+						</h1>
+					</div>
+				{% endblock %}
+			</header>
+			{% block footer %}
+				<footer>
+					{% include 'footer.twig' %}
+				</footer>
+				{{ function('wp_footer') }}
 			{% endblock %}
-		</header>
-
-		{% block footer %}
-			<footer>
-				{% include 'footer.twig' %}
-			</footer>
-			{{ function('wp_footer') }}
-		{% endblock %}
+		</div>
 	</body>
 </html>

@@ -4,7 +4,8 @@ System.config({
   "babelOptions": {
     "optional": [
       "runtime"
-    ]
+    ],
+    "blacklist": []
   },
   "paths": {
     "*": "*.jsx",
@@ -21,6 +22,7 @@ System.config({
     "css": "npm:jspm-loader-css-modules@0.1.2",
     "postcss-browser-reporter": "npm:postcss-browser-reporter@0.3.0",
     "react": "npm:react@0.14.0-beta3",
+    "react-dom": "npm:react-dom@0.14.0-beta3",
     "tachyons-background-size": "npm:tachyons-background-size@2.0.0",
     "tachyons-base": "npm:tachyons-base@1.1.0",
     "tachyons-border-colors": "npm:tachyons-border-colors@2.1.3",
@@ -217,6 +219,10 @@ System.config({
     "npm:promise@7.0.4": {
       "asap": "npm:asap@2.0.3",
       "fs": "github:jspm/nodelibs-fs@0.1.2"
+    },
+    "npm:react-dom@0.14.0-beta3": {
+      "fbjs": "npm:fbjs@0.1.0-alpha.4",
+      "react": "npm:react@0.14.0-beta3"
     },
     "npm:react@0.14.0-beta3": {
       "buffer": "github:jspm/nodelibs-buffer@0.1.0",
