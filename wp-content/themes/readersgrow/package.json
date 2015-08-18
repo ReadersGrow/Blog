@@ -17,7 +17,7 @@
       "baseURL": "app"
     },
     "dependencies": {
-      "css": "npm:jspm-loader-css-modules@^0.1.2",
+      "jspm-loader-css": "npm:jspm-loader-css@^0.1.6",
       "postcss-browser-reporter": "npm:postcss-browser-reporter@^0.3.0",
       "react": "npm:react@^0.14.0-beta3",
       "react-dom": "npm:react-dom@^0.14.0-beta3"

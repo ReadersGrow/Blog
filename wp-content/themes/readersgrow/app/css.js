@@ -1,7 +1,5 @@
-import {CSSLoader, Plugins} from 'jspm-loader-css';
-import browser-reporter from 'postcss-browser-reporter;'
+import { CSSLoader, Plugins } from 'jspm-loader-css'
 
-export default CSSLoader([
-  browser-reporter,
-  Plugins.autoprefixer()
-])
+export default new CSSLoader([
+    Plugins.autoprefixer()
+], __moduleName)

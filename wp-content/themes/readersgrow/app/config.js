@@ -8,7 +8,6 @@ System.config({
     "blacklist": []
   },
   "paths": {
-    "*": "*.jsx",
     "github:*": "jspm_packages/github/*.js",
     "npm:*": "jspm_packages/npm/*.js"
   }
@@ -19,7 +18,7 @@ System.config({
     "babel": "npm:babel-core@5.8.22",
     "babel-runtime": "npm:babel-runtime@5.8.20",
     "core-js": "npm:core-js@0.9.18",
-    "css": "npm:jspm-loader-css-modules@0.1.2",
+    "jspm-loader-css": "npm:jspm-loader-css@0.1.6",
     "postcss-browser-reporter": "npm:postcss-browser-reporter@0.3.0",
     "react": "npm:react@0.14.0-beta3",
     "react-dom": "npm:react-dom@0.14.0-beta3",
@@ -168,9 +167,6 @@ System.config({
     "npm:js-base64@2.1.9": {
       "buffer": "github:jspm/nodelibs-buffer@0.1.0"
     },
-    "npm:jspm-loader-css-modules@0.1.2": {
-      "jspm-loader-css": "npm:jspm-loader-css@0.1.6"
-    },
     "npm:jspm-loader-css@0.1.6": {
       "css-modules-loader-core": "npm:css-modules-loader-core@0.0.10",
       "path": "npm:path@0.11.14"
@@ -270,4 +266,3 @@ System.config({
     }
   }
 });
-
