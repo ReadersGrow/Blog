@@ -1,0 +1,70 @@
+$bp : (
+  "handheld": (
+    "min": 0,
+    "max": em(677px)
+  ),
+  "tablet": (
+    "min": em(678px),
+    "max": em(940px)
+  )
+);
+
+@mixin mobile_only() {
+  $breakpoints: map-get($bp, "handheld");
+  @media screen and (max-width: map-get($breakpoints, "max")) {
+    @content;
+  }
+}
+
+/**
+ *  Mobile Mixin
+ *
+ *  Styles for widths < tablet
+ *  Compiles to @media screen and (max-width: 1024)
+ *  @Usage:  @include mixin(tablet)
+ *
+ */
+@mixin mobile() {
+  @media screen and (max-width: em(940px)) {
+    @content;
+  }
+}
+
+/**
+ *  Header mobile breakpoint
+ *  Expanding it to 1024px beacuse of ipads
+ */
+@mixin header_mobile() {
+  @media screen and (max-width: em(1024px)) {
+    @content;
+  }
+}
+
+
+/**
+ *  Tablet Mixin
+ *
+ *  Styles for widths < tablet and > handheld
+ *  Compiles to @media screen and (max-width: 1024)
+ *  @Usage:  @include mixin(tablet)
+ *
+ */
+@mixin tablet() {
+  $breakpoints: map-get($bp, "tablet");
+  @media screen and (min-width: map-get($breakpoints, "min")) and (max-width: map-get($breakpoints, "max")) {
+    @content;
+  }
+}
+
+@mixin font-size($px: 16px) {
+  font-size: $px;
+  font-size: rem($px);
+}
+
+@mixin bold() {
+  font-family: "UniversLTPro-65Bold", sans-serif;
+}
+
+@mixin bold-condensed() {
+  font-family: "UniversLTPro-BoldCond", sans-serif;
+}

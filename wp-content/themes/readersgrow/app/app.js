@@ -1,11 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import styles from './css/app.css!';
-console.log(styles);
-
+import styles from 'app.css!';
 export class Main extends React.Component {
     render() {
-      return (<p style={styles.colorRed}>hello, world</p>);
+      return (<header className={styles.home}><h1>hello, world</h1></header>);
     }
 }
 

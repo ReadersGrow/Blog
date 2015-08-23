@@ -1,0 +1,12 @@
+@import 'bourbon';
+@import 'mixins';
+@import 'structure/grid-override';
+@import 'header';
+@import 'home';
+@import 'footer';
+
+@include mobile  {
+  *, *:before, *:after {
+    box-sizing: border-box;
+  }
+}

@@ -1,0 +1,87 @@
+/*
+ *  @templates: single-case-study.php
+ */
+.case-study {
+  &__gallery {
+    margin-bottom: 32px;
+  }
+  &__body {
+    padding-right: 20px;
+    box-sizing: border-box;
+  }
+  &__title {
+    @include mobile {
+      @include font-size(28px);
+      line-height: 1.2
+    }
+  }
+  &__subtitle {
+    @include font-size(28px);
+    @include mobile {
+      @include font-size(20px);
+    }
+    font-family: UniversLTPro-55Roman !important;
+    font-weight: 100;
+    line-height: 1.33;
+    margin-bottom: 20px;
+
+  }
+  &__blurb {
+    font-family: UniversLTPro-55Roman !important;
+    @include font-size(24px);
+    @include mobile_only {
+      line-height: 1.33;
+      @include font-size(18px);
+    }
+    line-height: 1.5;
+    font-weight: 100;
+  }
+  &__description {
+    line-height: 1.5;
+  }
+  &__list {
+    float: left;
+    list-style-type: none;
+    &-item {
+      position: relative;
+      &:before {
+        content: "–";
+        position: absolute;
+        margin-left: -12px;
+      }
+    }
+  }
+}
+
+.sidebar {
+  &__title {
+    margin-bottom: 0;
+  }
+  &__subtitle {
+    margin-bottom: 8px;
+    float: left;
+  }
+  &__image {
+    margin-bottom: 8px;
+  }
+  &__pdf-link {
+    background: white;
+    @include clearfix;
+    display: block;
+    @include size(100% 50px);
+    padding-left: 50px;
+    position: relative;
+    box-sizing: border-box;
+    color: black;
+    @include bold;
+    padding-top: 6px;
+    overflow: hidden;
+
+    &:before  {
+      content: url('/wp-content/themes/acrow-bridges/img/icon-pdf.png');
+      position: absolute;
+      top: 5px;
+      left: 4px;
+    }
+  }
+}

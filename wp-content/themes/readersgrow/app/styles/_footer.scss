@@ -1,0 +1,155 @@
+.footer-menus {
+  @include clearfix;
+
+  &__half {
+    float: left;
+
+    &--w360 {
+      width: 360px;
+    }
+
+    &--w560 {
+      width: 560px;
+    }
+
+    @include mobile {
+      padding-top: 10px;
+      width: 50%;
+
+      &--end {
+        @include clearfix;
+        padding-top: 46px;
+      }
+    }
+  }
+
+  &__column {
+    float: left;
+    width: 105px;
+
+    &--about {
+      width: 150px;
+    }
+
+    &--bridges {
+      width: 150px;
+    }
+
+    &--services {
+      padding-top: 36px;
+      width: 230px;
+    }
+
+    &--shoring-systems {
+      padding-top: 36px;
+      width: 180px;
+    }
+
+    @include mobile {
+      float: none;
+      padding-top: 0;
+      width: auto;
+
+      &--about {
+        margin: 20px 0;
+
+        ul {
+          @include column-count(2);
+          @include column-gap(0);
+        }
+      }
+
+      &--contact, &--locations {
+        float: left;
+        width: 50%;
+
+        .white {
+          display: none !important;
+        }
+      }
+
+      .yellow--no-mobile {
+        display: none;
+      }
+    }
+  }
+
+  @include mobile {
+    a {
+      line-height: 32px;
+    }
+  }
+}
+
+.footer-social {
+  display: none;
+}
+
+@include mobile {
+  #footer {
+    .container {
+      margin-top: 10px;
+    }
+    .white {
+      height: 32px;
+
+      a {
+        color: #FFFFFF;
+      }
+    }
+  }
+
+  #footer-address {
+    border-top: 1px solid #CCCCCC;
+    float: left;
+    max-width: none;
+    padding: 32px 20px 32px 0;
+    width: 50%;
+
+    &:before {
+      clear: left;
+      content: '';
+      display: table;
+    }
+  }
+
+  .footer-social {
+    @include clearfix;
+    border-top: 1px solid #CCCCCC;
+    display: block;
+    float: left;
+    padding: 32px 0;
+    width: 50%;
+
+    a {
+      float: left;
+      max-width: 50px;
+      width: 33%;
+    }
+  }
+
+  #footer-legal {
+    margin: 0 0 12px 0;
+    text-align: left;
+
+    span {
+      display: block;
+    }
+
+    &:before {
+      clear: left;
+      content: '';
+      display: table;
+    }
+  }
+}
+
+#toplink {
+  @media screen and (max-width: 1140px) {
+    display: none;
+  }
+}
+
+.menu-item-2560 {
+  list-style-type: none;
+}

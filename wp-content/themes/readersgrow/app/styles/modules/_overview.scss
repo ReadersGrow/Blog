@@ -1,0 +1,36 @@
+.overview  {
+  .overview-items {
+    @include mobile {
+      max-width: 100%;
+      height: auto;
+      margin: 0;
+      padding-left: 0;
+      h2 {
+        margin-left: 0;
+      }
+    };
+    .post-thumb {
+      @include mobile {
+        max-width: 100%
+      }
+      img {
+        @include mobile {
+          height: auto;
+          width: 100%;
+        };
+      }
+    }
+    table {
+      @include mobile {
+        float: left;
+        width: 100%;
+        td {
+          height: auto !important;
+          h2 {
+            margin: 0 0 32px;
+          }
+        }
+      };
+    }
+  }
+}
