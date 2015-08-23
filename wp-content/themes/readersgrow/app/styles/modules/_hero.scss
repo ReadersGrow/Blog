@@ -1,0 +1,100 @@
+@keyframes fadeInOut {
+  from {
+    @include transform(translateY(-50px));
+    opacity: 0;
+  }
+  25% {
+    @include transform(translateY(0));
+    opacity: 1;
+  }
+  75% {
+    @include transform(translateY(50px));
+    opacity: 0;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+
+.rg-hero {
+  height: calc(100vh - 80px);
+  position: relative;
+  background: {
+    color: darken($primary, 25%);
+    image: url('//lorempixel.com/1080/800/');
+    position: center center;
+    size: cover;
+    repeat: no-repeat;
+    blend-mode: overlay;
+  }
+  &__left {
+    @include span-columns(8);
+  }
+  &__right {
+    @include span-columns(4);
+    @include omega;
+  }
+  &__container {
+    @include row;
+    height: 100%;
+    padding: 64px 0;
+  }
+  &__title {
+    @include font-size(64px);
+    color: white;
+    text-shadow: 0 0 10px rgba(0,0,0,0.5);
+  }
+  &__form {
+    &-container {
+      position: absolute;
+      border-radius: 3px;
+      border: 1px solid white;
+      padding: 16px modular-scale(1);
+      background: transparentize(white, 0.8);
+    }
+  }
+  &__fieldset {
+    border: none;
+    margin: 10px 0;
+  }
+  &__label {
+    @include row;
+  }
+  &__submit {
+    margin-left: 8px;
+  }
+  &__prompt {
+    &-container {
+      @include position(absolute, null null 64px 0);
+    }
+  }
+  &__prompt, &__feature {
+      color: white;
+      text-shadow: 0 0 10px rgba(0,0,0,0.3);
+      float: left;
+  }
+  &__feature {
+    opacity: 0;
+    @include animation(fadeInOut 5s ease-in-out);
+    display: inline-block;
+    position: absolute;
+    width: calc(100vw - 8px);
+    @for $i from 1 to 6 {
+      &-#{$i} {
+        @include animation-delay(2s * $i);
+      }
+    }
+    &-container {
+      position: relative;
+      display: table;
+      height: 16px;
+      float: left;
+      margin-left: 8px;
+    }
+  }
+}
+
+.hdr-logo {
+  line-height: rem(80px);
+}

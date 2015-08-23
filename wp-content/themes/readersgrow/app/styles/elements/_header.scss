@@ -1,0 +1,18 @@
+.rg-header {
+  box-shadow: 0 0 10px rgba(0,0,0,0.5);
+  @include position(fixed, 0 0 null 0);
+  height: 80px;
+  height: rem(80px);
+  &__nav {
+    display: inline-block;
+  }
+  &__left {
+    float: left;
+  }
+  &__right {
+    float: right;
+  }
+  &__link {
+    line-height: 80px;
+  }
+}

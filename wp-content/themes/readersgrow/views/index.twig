@@ -1,5 +1,39 @@
 {% extends "base.twig" %}
 
 {% block content %}
-	<h1>Wat</h1>
+<section class="rg-hero">
+		<div class="wrapper">
+			<div class="rg-hero__container">
+				<article class="rg-hero__left">
+					<h1 class="rg-hero__title">Reader's Grow</h1>
+					<div class="rg-hero__prompt-container">
+						<span class="rg-hero__prompt">Helps students</span>
+						<div class="rg-hero__feature-container">
+							<span class="rg-hero__feature rg-hero__feature-1">explore their local library</span>
+							<span class="rg-hero__feature rg-hero__feature-2">find out how much fun reading can be</span>
+							<span class="rg-hero__feature rg-hero__feature-3">see the world in a new light. </span>
+							<span class="rg-hero__feature rg-hero__feature-4">raise money for their school </span>
+							<span class="rg-hero__feature rg-hero__feature-5">discover a new subject </span>
+							<span class="rg-hero__feature rg-hero__feature-6">see how expressive words can be	</span>
+						</div>
+					</div>
+				</article>
+				<aside class="rg-hero__right">
+					<div class="rg-hero__form-container">
+						<form class="rg-hero__form" method="post">
+							<fieldset class="rg-hero__fieldset">
+								<label class="rg-hero__label" for="">Email</label>
+								<input class="rg-hero__input" type="text" name="email" value="">
+							</fieldset>
+							<fieldset class="rg-hero__fieldset">
+								<label class="rg-hero__label" for="">Password</label>
+								<input class="rg-hero__input" type="text" name="password" value="">
+							</fieldset>
+							<input class="rg-hero__submit" type="submit" value="Log In">
+						</form>
+					</div>
+				</aside>
+			</div>
+		</div>
+</section>
 {% endblock %}

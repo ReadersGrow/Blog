@@ -1,9 +1,22 @@
+$visual-grid: true;
+
 @import 'bourbon';
+@import 'neat';
+//colors.css variables
+@import 'variables';
 @import 'mixins';
-@import 'structure/grid-override';
-@import 'header';
-@import 'home';
-@import 'footer';
+
+@import 'structure/normalize';
+@import 'structure/grid';
+
+@import 'config/fonts';
+@import 'config/pallette';
+
+
+@import 'elements/header';
+@import 'elements/anchor';
+
+@import 'modules/hero';
 
 @include mobile  {
   *, *:before, *:after {
